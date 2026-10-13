@@ -1,0 +1,536 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Prépa</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Prépa">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0E1120">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEL0lEQVR4nO3cMW7bZhjH4c9F5wC5QTJ5LHqAzumaQ3gr0tXIAQqvDbL1EF3TOQcwOmbKVTqwEAxJf5my+b0fKT/P5CiJRVM/vx9JiLp69fpNg2N+GL0BrJc4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9OHoD/nf76fvoTViXuw9vR29Cuxr7EQyaeNTASkYuK8qYY+BeGjM5ZPEE9SNkwORQxtPU77fqyZF+wj9vf6rcjPX7/e7fo49Xzo/xZyuyOGraLSmRGqXLyuHYUMZph/uncnGpi0MZTzOwj2GnssqYb9S+cvmcqCiOvUlobJxrb4/VrCwmB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDaPy9sjONvWt0cZu4OcPkIBIHkTiIxEEkDqLNnK1s4vD+wpgcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB9Fm3kPqjrd6JgeROIjEQSQOInEQbeZsZROH9xfG5CASB5E4iMRBJA4icRCJg2gz1zku1a///Jb+6su7z5VbckgcY5xo4vDfjKpEHNXmZHH8v9wvvzGniaPOE7J46NvPf7XWru9vFtqcxzkgLfLMMnamRGqIo8JSZUzK+hBHd8uWManpQxx99Shj8v7rx07feUccHfUrY9K7D3H00ruMSdc+xLENf//yR/2TiqOLZcfGVEbqo9/w2MxFsG3d8fatLXY28bCJ6euCQ9GJybG83ueZhyOkUy7iWLWjS4nJweAymjgWt9Sacu7pSY9oxLEllWOjbehsZSt3vC1yEjt8QZmYHAOcXjJWUkYTR73TV7SGXAlNxFHq8IrWHEPGRhNHpcMa9h5Zz4IyEUedoy/zLoi1ldHEUSz1sapDjR1xLOzRe0zmD4OzxkaPvMQxwJxXfeyCMhHHGKdf+zWU0cTRw8y7FxcsoNMhizhGOtrHSsZGE0cn8299nlJ4//Xj7otzn6vfmY44xtsFsZ6ZMRFHLzWfm9D1Aok4OurdR+9LZ+Loq18fBRdVxdFdjz5qPqWjKI67D28f/nFbN6E837J9XN/f7O3PTkyOIkv18SI+2eelDY/W2pd3n5+TyPX9TWUZrbWrV6/flD3Z7afve49s5W3Dizvrfch7TdSsKa04jqaPA6c/h/RwvpaV0dYQx+SFJ3IoLbuXHEfLffCoyjLakAPS4p/wYtTvtwGTY8cImWnUr9PI6xxGyBwD99LIyfGQKbJnDb85a4mDFXL5nEgcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgfRf4QLAqJ006hDAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEL0lEQVR4nO3cMW7bZhjH4c9F5wC5QTJ5LHqAzumaQ3gr0tXIAQqvDbL1EF3TOQcwOmbKVTqwEAxJf5my+b0fKT/P5CiJRVM/vx9JiLp69fpNg2N+GL0BrJc4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9OHoD/nf76fvoTViXuw9vR29Cuxr7EQyaeNTASkYuK8qYY+BeGjM5ZPEE9SNkwORQxtPU77fqyZF+wj9vf6rcjPX7/e7fo49Xzo/xZyuyOGraLSmRGqXLyuHYUMZph/uncnGpi0MZTzOwj2GnssqYb9S+cvmcqCiOvUlobJxrb4/VrCwmB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDaPy9sjONvWt0cZu4OcPkIBIHkTiIxEEkDqLNnK1s4vD+wpgcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB9Fm3kPqjrd6JgeROIjEQSQOInEQbeZsZROH9xfG5CASB5E4iMRBJA4icRCJg2gz1zku1a///Jb+6su7z5VbckgcY5xo4vDfjKpEHNXmZHH8v9wvvzGniaPOE7J46NvPf7XWru9vFtqcxzkgLfLMMnamRGqIo8JSZUzK+hBHd8uWManpQxx99Shj8v7rx07feUccHfUrY9K7D3H00ruMSdc+xLENf//yR/2TiqOLZcfGVEbqo9/w2MxFsG3d8fatLXY28bCJ6euCQ9GJybG83ueZhyOkUy7iWLWjS4nJweAymjgWt9Sacu7pSY9oxLEllWOjbehsZSt3vC1yEjt8QZmYHAOcXjJWUkYTR73TV7SGXAlNxFHq8IrWHEPGRhNHpcMa9h5Zz4IyEUedoy/zLoi1ldHEUSz1sapDjR1xLOzRe0zmD4OzxkaPvMQxwJxXfeyCMhHHGKdf+zWU0cTRw8y7FxcsoNMhizhGOtrHSsZGE0cn8299nlJ4//Xj7otzn6vfmY44xtsFsZ6ZMRFHLzWfm9D1Aok4OurdR+9LZ+Loq18fBRdVxdFdjz5qPqWjKI67D28f/nFbN6E837J9XN/f7O3PTkyOIkv18SI+2eelDY/W2pd3n5+TyPX9TWUZrbWrV6/flD3Z7afve49s5W3Dizvrfch7TdSsKa04jqaPA6c/h/RwvpaV0dYQx+SFJ3IoLbuXHEfLffCoyjLakAPS4p/wYtTvtwGTY8cImWnUr9PI6xxGyBwD99LIyfGQKbJnDb85a4mDFXL5nEgcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgfRf4QLAqJ006hDAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1120; --surface:#171B2E; --surface2:#20253C; --line:#2A3050;
+  --text:#EEF0F7; --muted:#8C93AC; --accent:#86A3FF; --accent-ink:#0E1120;
+  --red:#FF7383; --green:#5FD49A; --amber:#F5C26B;
+}
+html,body{background:var(--bg)!important;color:var(--text)!important;margin:0;padding:0}
+*{box-sizing:border-box}
+.app{background:var(--bg);color:var(--text);min-height:100vh;font-family:Figtree,system-ui,sans-serif;font-size:16px;line-height:1.5;padding-bottom:100px}
+.wrap{max-width:560px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 18px 0}
+h1,h2,h3,p{margin:0}
+h1{font-family:Literata,serif;font-weight:600;font-size:30px;line-height:1.15;letter-spacing:-.3px}
+h2{font-size:15px;font-weight:600;color:var(--muted);margin:30px 0 10px}
+.muted{color:var(--muted);font-size:14px}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;padding:0}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.hero{margin-top:20px;padding:20px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.hero .lbl{font-size:14px;color:var(--muted)}
+.hero .big{font-family:Literata,serif;font-weight:600;font-size:60px;line-height:1;color:var(--accent);margin-top:8px}
+.hero .big small{font-size:22px;font-weight:500;margin-left:6px;color:var(--text)}
+.hero .big.red{color:var(--red)}
+.hero .what{font-size:19px;font-weight:600;margin-top:10px}
+
+.remind{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:12px;background:var(--surface);border-left:3px solid var(--accent);margin-bottom:8px}
+.remind.red{border-left-color:var(--red)} .remind.green{border-left-color:var(--green)} .remind.amber{border-left-color:var(--amber)}
+.remind .ic{font-size:20px;line-height:1.3}
+.remind b{font-weight:600}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
+.item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.card .item:last-child{border-bottom:none}
+.item .main{flex:1;min-width:0}
+.item .t{font-weight:600}
+.item.done .t{text-decoration:line-through;color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--surface2);color:var(--accent);margin-right:6px}
+.tag.ds{background:rgba(255,115,131,.15);color:var(--red)}
+.tag.colle{background:rgba(245,194,107,.15);color:var(--amber)}
+.days{font-weight:700;color:var(--accent);font-size:15px;min-width:46px;text-align:right}
+.days.soon{color:var(--red)}
+.check{width:26px;height:26px;border:2px solid var(--muted);border-radius:8px;flex-shrink:0;display:grid;place-items:center;font-size:15px;color:var(--accent-ink);font-weight:700}
+.check.on{background:var(--green);border-color:var(--green)}
+.del{color:var(--muted);font-size:22px;padding:2px 6px;line-height:1}
+
+.subj{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.subj-head{display:flex;align-items:center;gap:12px;width:100%;padding:16px;text-align:left}
+.subj-head .n{font-weight:600;font-size:17px;flex:1}
+.bar{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;margin:0 16px 14px}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px;transition:width .3s}
+.subj-body{padding:0 16px 14px}
+.chap{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.chap .name{flex:1}
+.lvl{font-size:13px;font-weight:700;padding:5px 10px;border-radius:8px;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.lvl[data-l="1"]{color:var(--amber);background:rgba(245,194,107,.13)}
+.lvl[data-l="2"]{color:var(--accent);background:rgba(134,163,255,.14)}
+.lvl[data-l="3"]{color:var(--green);background:rgba(95,212,154,.14)}
+
+.add-row{display:flex;gap:8px;margin-top:12px}
+input,select{font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface2);color:var(--text);width:100%;color-scheme:dark}
+input::placeholder{color:var(--muted)}
+.btn{background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:10px;font-weight:700;white-space:nowrap}
+.btn.ghost{background:var(--surface2);color:var(--text)}
+.fab{position:fixed;right:max(18px,calc(50% - 262px));bottom:92px;width:58px;height:58px;border-radius:18px;background:var(--accent);color:var(--accent-ink);font-size:32px;line-height:1;font-weight:500;box-shadow:0 6px 20px rgba(0,0,0,.45);z-index:5}
+
+nav{position:fixed;left:0;right:0;bottom:0;background:rgba(14,17,32,.96);border-top:1px solid var(--line);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom);z-index:6}
+nav button{flex:1;max-width:120px;padding:12px 0 14px;font-size:13px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px}
+nav button .ni{font-size:20px;line-height:1;filter:grayscale(1);opacity:.6}
+nav button.on{color:var(--accent)}
+nav button.on .ni{filter:none;opacity:1}
+
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:10}
+.sheet-bg.open{display:flex}
+.sheet{background:var(--surface);width:100%;max-width:560px;border-radius:20px 20px 0 0;padding:24px 20px calc(24px + env(safe-area-inset-bottom));animation:up .22s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.sheet h3{font-family:Literata,serif;font-size:22px;font-weight:600;margin-bottom:6px}
+.sheet label{display:block;font-size:14px;font-weight:600;color:var(--muted);margin:14px 0 6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.empty{padding:18px 0;color:var(--muted)}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0;margin-top:16px;scrollbar-width:none}
+.chip{padding:8px 14px;border-radius:20px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600;white-space:nowrap;color:var(--muted)}
+.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.link{color:var(--muted);text-decoration:underline;font-size:14px}
+
+.course{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.card .course:last-child{border-bottom:none}
+.course .time{font-weight:700;min-width:70px;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums}
+.course .sj{font-weight:600}
+.course.past{opacity:.4}
+.course.now{background:rgba(134,163,255,.1);margin:0 -16px;padding:12px 16px;border-radius:10px;border-bottom-color:transparent}
+.badge{font-size:12px;font-weight:700;color:var(--accent-ink);background:var(--accent);padding:2px 8px;border-radius:6px;margin-left:6px}
+.weekpill{display:inline-block;font-weight:700;font-size:13px;padding:3px 10px;border-radius:8px;background:var(--surface2);color:var(--accent)}
+.seg{display:flex;background:var(--surface2);border-radius:10px;padding:3px;gap:3px}
+.seg button{flex:1;padding:10px;border-radius:8px;font-weight:700;color:var(--muted)}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.dayh{font-size:17px;font-weight:600;color:var(--text);margin:24px 0 8px;font-family:Literata,serif}
+.dayh.today{color:var(--accent)}
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}
+
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.addhw{background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;padding:10px 14px;border-radius:12px;white-space:nowrap;margin-top:2px;box-shadow:0 4px 14px rgba(134,163,255,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .chip{padding:9px 14px}
+.tag.devoir{background:rgba(95,212,154,.15);color:var(--green)}
+.sheet{max-height:92vh;overflow-y:auto}
+.hint{font-size:13px;color:var(--muted);margin-top:6px}
+.warn{margin-top:14px;padding:12px 14px;border-radius:12px;background:rgba(245,194,107,.12);color:var(--amber);font-size:14px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="app">
+  <div class="wrap">
+    <div class="head"><h1 id="title">Aujourd'hui</h1><button class="addhw" onclick="openHomework()">+ Devoir</button></div>
+    <p class="muted" id="sub" style="margin-top:4px"></p>
+    <div id="view"><p class="empty">Chargement…</p></div>
+  </div>
+  <button class="fab" id="fab" aria-label="Ajouter">+</button>
+  <nav>
+    <button data-tab="jour" class="on"><span class="ni">☀️</span>Aujourd'hui</button>
+    <button data-tab="cours"><span class="ni">🕘</span>Cours</button>
+    <button data-tab="agenda"><span class="ni">📅</span>Agenda</button>
+    <button data-tab="chapitres"><span class="ni">📚</span>Chapitres</button>
+    <button data-tab="taches"><span class="ni">✅</span>Tâches</button>
+  </nav>
+  <div class="sheet-bg" id="sheetBg"><div class="sheet" id="sheet"></div></div>
+</div>
+
+<script>
+const SUBJECTS=["Maths","Physique","Chimie","SI","Info","Français","Anglais"];
+const TYPES=["Devoir","Colle","DS","DM","Interro","Autre"];
+const LEVELS=["À voir","Vu en cours","Revu","Maîtrisé"];
+const KEY="prepa-organiseur-v1";
+let tab="jour", taskFilter="Toutes", openSubj=null;
+let data={events:[],tasks:[],chapters:Object.fromEntries(SUBJECTS.map(s=>[s,[]])),settings:{group:null,lv2:null,ref:null,refLetter:null}};
+let coursWeek=null;
+/* Colloscope PCSI 1 — S1 2026/27 — groupe de colle 1 */
+const COLLE_CODES={A1:["Anglais",1,18,"Mme Copson"],A2:["Anglais",2,16,"Mme Gaillard"],A3:["Anglais",2,17,"Mme Gateault"],A4:["Anglais",4,17,"M. Fouilleux"],
+  C1A:["Chimie",1,13,"M. Steiner"],C2:["Chimie",2,17,"M. Clarté"],L1:["Français",4,16,"Mme Peron-Blevennec"],
+  M1:["Maths",1,12,"M. Le Bras"],M2:["Maths",2,18,"M. Guichet"],M3:["Maths",2,16,"M. Ballu"],M4:["Maths",3,17,"M. Gourgousse"],
+  P1:["Physique",2,16,"M. Piron"],P2:["Physique",2,18,"M. Baptiste"],P3:["Physique",3,17,"M. Turenne"],
+  SI1:["SI",4,16,"M. Tacquet"],SI2:["SI",1,18,"Mme Coicadan"]};
+const COLLE_WEEKS=[["2026-10-12","M3 C1A"],["2026-11-02","A2 SI2"],["2026-11-09","M2 P3"],["2026-11-16","A1 C2"],
+  ["2026-11-23","M1 P1 L1"],["2026-11-30","A3 SI1"],["2026-12-07","M4 C2"],["2026-12-14","A4 P2"],
+  ["2027-01-04","M3 C1A"],["2027-01-11","A2 SI2"],["2027-01-18","M2 P3"],["2027-01-25","A1 C2"]];
+function importColloscope(){
+  if(data.colloImported)return;
+  COLLE_WEEKS.forEach(([mon,codes],wi)=>codes.split(" ").forEach(code=>{
+    const [sj,day,h,who]=COLLE_CODES[code];
+    const d=new Date(mon+"T00:00:00");d.setDate(d.getDate()+day-1);
+    data.events.push({id:uid(),type:"Colle",subject:sj,date:isoLocal(d),time:String(h).padStart(2,"0")+":00",note:`${who} (${code})`,done:wi===0,collo:true});
+  }));
+  data.colloImported=true;save();
+}
+const DAYS=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+const COMMON_TUE=[[2,8,10,"Physique","Bât M"],[2,10,12,"Anglais","I32"],[2,13,14,"LV2",""],[2,14,16,"Maths","I32"]];
+const EDT={
+ A:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"SI","I32"],[1,16,18,"Maths","I32"],...COMMON_TUE,
+    [3,9,11,"TP Chimie","Bât M",1],[3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],[3,16,17,"EPS",""],
+    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],[4,12,13,"LV2",""],
+    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,12,13,"EPS",""],
+    [5,14,16,"TP SI","Bât M",1],[5,14,16,"TP Physique","Bât M",2],[5,16,18,"TP Physique","Bât M",1],[5,16,18,"TP SI","Bât M",2]],
+ B:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"Maths","I32"],[1,16,17,"TD Chimie","I32"],...COMMON_TUE,
+    [3,9,11,"TP Chimie","Bât M",2],[3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],[3,16,17,"EPS",""],
+    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],[4,12,13,"LV2",""],[4,14,16,"Info","G11"],
+    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,12,13,"EPS",""],
+    [5,14,16,"TP Physique","Bât M",1],[5,14,16,"TP SI","Bât M",2],[5,16,18,"TP SI","Bât M",1],[5,16,18,"TP Physique","Bât M",2]]
+};
+const isoLocal=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+function mondayOf(d){const x=new Date(d);x.setHours(0,0,0,0);x.setDate(x.getDate()-((x.getDay()+6)%7));return x}
+function configured(){const st=data.settings;return st.group&&st.lv2&&st.ref}
+function weekLetter(date){
+  const st=data.settings;if(!st.ref)return null;
+  const w=Math.round((mondayOf(date)-new Date(st.ref+"T00:00:00"))/(7*86400000));
+  return ((w%2)+2)%2===0?st.refLetter:(st.refLetter==="A"?"B":"A");
+}
+function coursesOf(letter,day){
+  const st=data.settings;
+  return EDT[letter].filter(c=>c[0]===day&&(!c[5]||c[5]===st.group)).map(c=>{
+    let sj=c[3],room=c[4];
+    if(sj==="LV2"){sj=st.lv2||"LV2";room=st.lv2==="Allemand"?"D12":st.lv2==="Espagnol"?"I32":"D12 / I32"}
+    return {start:c[1],end:c[2],sj,room};
+  }).sort((a,b)=>a.start-b.start);
+}
+function coursesFor(date){const l=weekLetter(date);return l?coursesOf(l,date.getDay()):[]}
+function nextSchoolDay(d){const x=new Date(d);x.setHours(0,0,0,0);do{x.setDate(x.getDate()+1)}while(x.getDay()===0||x.getDay()===6);return x}
+function courseRow(c,now){
+  let cls="",badge="";
+  if(now!=null){const h=now.getHours()+now.getMinutes()/60;if(h>=c.end)cls="past";else if(h>=c.start){cls="now";badge='<span class="badge">En cours</span>'}}
+  return `<div class="course ${cls}"><span class="time">${c.start}h–${c.end}h</span><div><div class="sj">${esc(c.sj)}${badge}</div>${c.room?`<div class="muted">${esc(c.room)}</div>`:""}</div></div>`;
+}
+
+const $=s=>document.querySelector(s);
+const uid=()=>Math.random().toString(36).slice(2,10);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+
+let canSave=true;
+async function readStore(){
+  try{const r=await window.storage.get(KEY,false);if(r&&r.value)return r.value}catch(e){}
+  try{return localStorage.getItem(KEY)}catch(e){}
+  return null;
+}
+async function writeStore(v){
+  let ok=false;
+  try{if(window.storage){await window.storage.set(KEY,v,false);ok=true}}catch(e){}
+  try{localStorage.setItem(KEY,v);ok=true}catch(e){}
+  return ok;
+}
+async function load(){
+  try{
+    const raw=await readStore();
+    if(raw){const d=JSON.parse(raw);data={...data,...d,chapters:{...data.chapters,...(d.chapters||{})},settings:{...data.settings,...(d.settings||{})}};}
+  }catch(e){}
+  importColloscope();
+  render();
+}
+async function save(){
+  const ok=await writeStore(JSON.stringify(data));
+  if(ok!==canSave){canSave=ok;render()}
+}
+
+function daysUntil(ds){const t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(ds+"T00:00:00")-t)/86400000)}
+function fmtDate(ds,time){const s=new Date(ds+"T00:00:00").toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"short"});return time?`${s} · ${time}`:s}
+function jLabel(n){return n===0?"Auj.":n===1?"Dem.":`J-${n}`}
+function tagClass(t){return t==="DS"||t==="Contrôle"?"ds":t==="Colle"?"colle":t==="Devoir"?"devoir":""}
+function upcoming(){return data.events.filter(e=>!e.done&&daysUntil(e.date)>=0).sort((a,b)=>(a.date+(a.time||"")).localeCompare(b.date+(b.time||"")))}
+
+function render(){
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
+  $("#fab").style.display=(tab==="cours"||tab==="jour")?"none":"";
+  setTimeout(()=>{if(!canSave&&!$("#warn"))$("#view").insertAdjacentHTML("afterbegin",`<div class="warn" id="warn">La sauvegarde ne marche pas dans l'aperçu de Claude. Ouvre l'appli depuis ton lien Netlify pour garder tes données.</div>`)},0);
+  ({jour:renderJour,cours:renderCours,agenda:renderAgenda,chapitres:renderChapitres,taches:renderTaches})[tab]();
+}
+
+/* ---------- Aujourd'hui : rappels du jour ---------- */
+function renderJour(){
+  const now=new Date();
+  const h=now.getHours();
+  $("#title").textContent=h<12?"Bonjour Anton":h<18?"Bon après-midi":"Bonsoir Anton";
+  $("#sub").textContent=cap(now.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}));
+  const up=upcoming();
+  let out="";
+  if(!configured()){
+    out+=`<div class="hero"><div class="what" style="margin-top:0">Configure ton emploi du temps</div>
+      <p class="muted" style="margin:6px 0 14px">Ton groupe de TP, ta LV2 et la semaine en cours (A ou B). Ça prend 10 secondes.</p>
+      <button class="btn" onclick="openSettings()">Configurer</button></div>`;
+  }else{
+    const isWE=now.getDay()===0||now.getDay()===6;
+    const today=isWE?[]:coursesFor(now);
+    const left=today.filter(c=>c.end>now.getHours()+now.getMinutes()/60);
+    if(today.length&&left.length){
+      out+=`<h2>Cours aujourd'hui <span class="weekpill">Semaine ${weekLetter(now)}</span></h2><div class="card">${today.map(c=>courseRow(c,now)).join("")}</div>`;
+    }else{
+      const nd=nextSchoolDay(now),dd=Math.round((nd-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/86400000);
+      out+=`<h2>${dd===1?"Demain":DAYS[nd.getDay()]} <span class="weekpill">Semaine ${weekLetter(nd)}</span></h2><div class="card">${coursesFor(nd).map(c=>courseRow(c,null)).join("")}</div>`;
+    }
+  }
+  if(up.length){
+    const n=up[0],d=daysUntil(n.date);
+    out+=`<div class="hero"><div class="lbl">Prochaine échéance</div>
+      <div class="big ${d<=2?"red":""}">${d===0?"Aujourd'hui":d===1?"Demain":d+"<small>jours</small>"}</div>
+      <div class="what">${n.type==="Devoir"?"Devoir de "+esc(n.subject)+(n.note?" : "+esc(n.note):""):esc(n.type)+" de "+esc(n.subject)}</div>
+      <div class="muted">${fmtDate(n.date,n.time)}${n.note?" — "+esc(n.note):""}</div></div>`;
+  }
+  const rem=[];
+  up.filter(e=>daysUntil(e.date)===0).forEach(e=>rem.push(["red","⏰",`<b>Aujourd'hui${e.time?" à "+e.time:""}</b> : ${esc(e.type)} de ${esc(e.subject)}${e.note?" — "+esc(e.note):""}`]));
+  up.filter(e=>daysUntil(e.date)===1).forEach(e=>rem.push(["amber","🌙",e.type==="Devoir"
+    ?`<b>Pour demain</b> en ${esc(e.subject)} : ${esc(e.note||"devoir")}. À faire ce soir.`
+    :`<b>Demain${e.time?" à "+e.time.replace(":00","h"):""}</b> : ${esc(e.type)} de ${esc(e.subject)}${e.type==="Colle"&&e.note?" avec "+esc(e.note.replace(/ \(.*\)/,"")):""}. ${e.type==="Colle"?"Revois le cours ce soir.":e.type==="DM"?"Termine-le ce soir.":"Révise ce soir."}`]));
+  up.filter(e=>(e.type==="Devoir")&&daysUntil(e.date)>=2&&daysUntil(e.date)<=3).forEach(e=>rem.push(["","📒",`<b>${esc(e.subject)}</b> pour ${DAYS[new Date(e.date+"T00:00:00").getDay()].toLowerCase()} : ${esc(e.note||"devoir")}`]));
+  up.filter(e=>(e.type==="DS"||e.type==="Interro")&&daysUntil(e.date)>=2&&daysUntil(e.date)<=7).forEach(e=>rem.push(["","📝",`<b>${esc(e.type)} de ${esc(e.subject)} dans ${daysUntil(e.date)} jours</b>. Commence les révisions.`]));
+  if(configured()){
+    const nd=nextSchoolDay(now),tomorrowIsNext=Math.round((nd-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/86400000)===1;
+    const nc=coursesFor(nd),when=tomorrowIsNext?"Demain":DAYS[nd.getDay()];
+    const tp=nc.filter(c=>c.sj.startsWith("TP"));
+    if(tp.length)rem.push(["amber","🥼",`<b>${when}</b> : ${tp.map(c=>esc(c.sj)+" à "+c.start+"h").join(", ")}. Prends ta blouse et relis le sujet de TP.`]);
+    if(nc.some(c=>c.sj==="EPS"))rem.push(["","👟",`<b>${when}</b> : EPS à ${nc.find(c=>c.sj==="EPS").start}h. Pense à tes affaires de sport.`]);
+    if(nc.length)rem.push(["","🎒",`<b>${when}</b> : ${nc.length} cours, de ${nc[0].start}h à ${Math.max(...nc.map(c=>c.end))}h. Prépare ton sac : ${[...new Set(nc.map(c=>c.sj.replace(/^(TP|TD) /,"")))].join(", ")}.`]);
+  }
+  const todo=data.tasks.filter(t=>!t.done);
+  if(todo.length)rem.push(["","✅",`<b>${todo.length} tâche${todo.length>1?"s":""}</b> à faire. Commence par : ${esc(todo[0].text)}`]);
+  const toReview=Object.entries(data.chapters).flatMap(([s,l])=>l.filter(c=>c.level===1||c.level===2).map(c=>({...c,s})));
+  if(toReview.length){
+    const day=Math.floor(now/86400000);
+    const pick=toReview[day%toReview.length];
+    rem.push(["green","📚",`<b>Révision du jour</b> : ${esc(pick.name)} (${esc(pick.s)}), actuellement « ${LEVELS[pick.level]} ».`]);
+  }
+  out+=`<h2>Rappels du jour</h2>`;
+  out+=rem.length?rem.map(([c,i,t])=>`<div class="remind ${c}"><span class="ic">${i}</span><div>${t}</div></div>`).join("")
+    :`<p class="empty">Aucun rappel. Ajoute tes colles et DS dans l'Agenda, tes chapitres et tes tâches : chaque jour, cette page te dira quoi faire.</p>`;
+  if(todo.length){
+    out+=`<h2>À faire</h2><div class="card">`+todo.slice(0,4).map(taskRow).join("")+`</div>`;
+  }
+  $("#view").innerHTML=out;
+}
+
+/* ---------- Cours ---------- */
+function renderCours(){
+  $("#title").textContent="Emploi du temps";
+  if(!configured()){
+    $("#sub").textContent="";
+    $("#view").innerHTML=`<div class="hero"><div class="what" style="margin-top:0">Configure ton emploi du temps</div>
+      <p class="muted" style="margin:6px 0 14px">Choisis ton groupe de TP, ta LV2 et la semaine en cours.</p>
+      <button class="btn" onclick="openSettings()">Configurer</button></div>`;return;
+  }
+  const now=new Date(),cur=weekLetter(now);
+  if(!coursWeek)coursWeek=cur;
+  $("#sub").textContent=`Cette semaine : semaine ${cur} · groupe ${data.settings.group} · ${data.settings.lv2}`;
+  let h=`<div class="toprow"><div class="seg" style="flex:1">${["A","B"].map(l=>`<button class="${coursWeek===l?"on":""}" onclick="coursWeek='${l}';render()">Semaine ${l}</button>`).join("")}</div>
+    <button class="btn ghost" onclick="openSettings()" aria-label="Réglages">⚙️</button></div>`;
+  for(let d=1;d<=5;d++){
+    const isToday=coursWeek===cur&&now.getDay()===d;
+    h+=`<div class="dayh ${isToday?"today":""}">${DAYS[d]}${isToday?" · aujourd'hui":""}</div><div class="card">${coursesOf(coursWeek,d).map(c=>courseRow(c,isToday?now:null)).join("")}</div>`;
+  }
+  $("#view").innerHTML=h;
+}
+function openSettings(){
+  const st=data.settings,cur=weekLetter(new Date())||"A";
+  const seg=(name,vals,sel)=>`<div class="seg">${vals.map(v=>`<button data-k="${name}" data-v="${v}" class="${String(sel)===String(v)?"on":""}" onclick="pickSeg(this)">${name==="group"?"Groupe "+v:name==="week"?"Semaine "+v:v}</button>`).join("")}</div>`;
+  $("#sheet").innerHTML=`<h3>Réglages</h3>
+    <label>Ton groupe de TP</label>${seg("group",[1,2],st.group)}
+    <label>Ta LV2</label>${seg("lv2",["Allemand","Espagnol"],st.lv2)}
+    <label>Cette semaine, c'est</label>${seg("week",["A","B"],st.ref?cur:"")}
+    <p class="muted" style="margin-top:8px">L'alternance A/B se fait ensuite toute seule. Si elle se décale après des vacances, reviens ici pour corriger.</p>
+    <div class="grid2" style="margin-top:20px"><button class="btn ghost" onclick="closeSheet()">Annuler</button><button class="btn" onclick="saveSettings()">Enregistrer</button></div>
+    <label style="margin-top:26px">Sauvegarde de secours</label>
+    <div class="grid2"><button class="btn ghost" onclick="exportData()">Copier mes données</button><button class="btn ghost" onclick="importData()">Restaurer</button></div>
+    <p class="hint">Copie tes données et colle-les dans tes Notes de temps en temps. « Restaurer » les remet si tu changes de téléphone.</p>`;
+  $("#sheetBg").classList.add("open");
+}
+async function exportData(){
+  const txt=JSON.stringify(data);
+  try{await navigator.clipboard.writeText(txt);alert("Données copiées. Colle-les dans une note pour les garder.")}
+  catch(e){prompt("Copie ce texte et garde-le dans une note :",txt)}
+}
+function importData(){
+  const txt=prompt("Colle ici tes données sauvegardées :");if(!txt)return;
+  try{const d=JSON.parse(txt);if(!d.events)throw 0;
+    data={...data,...d,chapters:{...data.chapters,...(d.chapters||{})},settings:{...data.settings,...(d.settings||{})}};
+    save();closeSheet();render();alert("Données restaurées.")}
+  catch(e){alert("Ce texte n'est pas une sauvegarde valide. Recopie-la en entier.")}
+}
+function pickSeg(b){b.parentNode.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b))}
+function saveSettings(){
+  const get=k=>document.querySelector(`#sheet button.on[data-k="${k}"]`)?.dataset.v;
+  const g=get("group"),l=get("lv2"),w=get("week");
+  if(!g||!l||!w){alert("Choisis ton groupe, ta LV2 et la semaine.");return}
+  data.settings={group:+g,lv2:l,ref:isoLocal(mondayOf(new Date())),refLetter:w};
+  coursWeek=null;save();closeSheet();render();
+}
+
+/* ---------- Ajout rapide devoir / contrôle ---------- */
+let hw={kind:"Devoir",subject:null,when:null};
+const EDT_MATCH={Maths:["Maths"],Physique:["Physique","TP Physique"],Chimie:["Chimie","TP Chimie","TD Chimie"],SI:["SI","TD SI","TP SI"],Info:["Info"],"Français":["Lettres"],Anglais:["Anglais"]};
+function nextCourseDate(subject){
+  if(!configured())return null;
+  const d=new Date();d.setHours(0,0,0,0);
+  for(let i=1;i<=28;i++){d.setDate(d.getDate()+1);
+    if(d.getDay()===0||d.getDay()===6)continue;
+    if(coursesFor(d).some(c=>EDT_MATCH[subject].includes(c.sj)))return isoLocal(d);}
+  return null;
+}
+function openHomework(){hw={kind:"Devoir",subject:null,when:null};drawHomework();$("#sheetBg").classList.add("open")}
+function drawHomework(){
+  const t=new Date();const tm=new Date(t);tm.setDate(t.getDate()+1);
+  const nc=hw.subject?nextCourseDate(hw.subject):null;
+  const whenOpts=[];
+  if(nc)whenOpts.push(["next",`Prochain cours (${new Date(nc+"T00:00:00").toLocaleDateString("fr-FR",{weekday:"short",day:"numeric"})})`,nc]);
+  whenOpts.push(["tomorrow","Demain",isoLocal(tm)]);
+  const wk=new Date(t);wk.setDate(t.getDate()+7);whenOpts.push(["week","Dans 1 semaine",isoLocal(wk)]);
+  if(!hw.when||!whenOpts.some(o=>o[0]===hw.when[0])&&hw.when[0]!=="custom")hw.when=whenOpts[0];
+  $("#sheet").innerHTML=`<h3>Ajouter</h3>
+    <div class="seg" style="margin-top:10px">${["Devoir","Contrôle"].map(k=>`<button class="${hw.kind===k?"on":""}" onclick="hw.kind='${k}';drawHomework()">${k==="Devoir"?"Devoir à faire":"Contrôle"}</button>`).join("")}</div>
+    <label>Matière</label>
+    <div class="chips">${SUBJECTS.map(s=>`<button class="chip ${hw.subject===s?"on":""}" onclick="hw.subject='${s}';hw.when=null;drawHomework()">${s}</button>`).join("")}</div>
+    <label for="hwTxt">${hw.kind==="Devoir"?"Quoi":"Sur quoi (facultatif)"}</label>
+    <input id="hwTxt" placeholder="${hw.kind==="Devoir"?"Exos 4 à 7 p. 52":"Chapitre 3, suites"}" value="${esc(hw.txt||"")}" oninput="hw.txt=this.value">
+    <label>${hw.kind==="Devoir"?"Pour quand":"Quand"}</label>
+    <div class="chips">${whenOpts.map(o=>`<button class="chip ${hw.when[0]===o[0]?"on":""}" onclick="hw.when=['${o[0]}','${o[1]}','${o[2]}'];drawHomework()">${o[1]}</button>`).join("")}
+      <button class="chip ${hw.when[0]==="custom"?"on":""}" onclick="hw.when=['custom','',hw.when[2]];drawHomework()">Autre date</button></div>
+    ${hw.when[0]==="custom"?`<input type="date" id="hwDate" style="margin-top:10px" value="${hw.when[2]}" onchange="hw.when[2]=this.value">`:""}
+    ${!configured()&&hw.subject?`<p class="hint">Configure ton emploi du temps pour avoir l'option « prochain cours ».</p>`:""}
+    <button class="btn" style="width:100%;margin-top:22px" onclick="saveHomework()">${hw.kind==="Devoir"?"Ajouter le devoir":"Ajouter le contrôle"}</button>`;
+}
+function saveHomework(){
+  if(!hw.subject){alert("Choisis une matière.");return}
+  const txt=(hw.txt||"").trim();
+  if(hw.kind==="Devoir"&&!txt){$("#hwTxt").focus();return}
+  const date=hw.when[2];if(!date)return;
+  data.events.push({id:uid(),type:hw.kind==="Devoir"?"Devoir":"DS",subject:hw.subject,date,time:"",note:txt,done:false});
+  hw.txt="";save();closeSheet();render();
+}
+
+/* ---------- Agenda ---------- */
+function renderAgenda(){
+  $("#title").textContent="Agenda";
+  const up=upcoming();
+  $("#sub").textContent=up.length?`${up.length} échéance${up.length>1?"s":""} à venir`:"Colles, DS, DM et interros";
+  const past=data.events.filter(e=>e.done||daysUntil(e.date)<0).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,8);
+  let h=`<h2>À venir</h2>`;
+  h+=up.length?`<div class="card">${up.map(evRow).join("")}</div>`:`<p class="empty">Rien de prévu. Ajoute ta prochaine colle ou ton prochain DS avec le bouton +.</p>`;
+  if(past.length)h+=`<h2>Passé</h2><div class="card">${past.map(evRow).join("")}</div>`;
+  h+=`<p style="margin:36px 0 10px"><button class="link" onclick="resetAll()">Tout effacer</button></p>`;
+  $("#view").innerHTML=h;
+}
+function evRow(e){
+  const d=daysUntil(e.date),isPast=e.done||d<0;
+  return `<div class="item ${isPast?"done":""}">
+    <button class="check ${e.done?"on":""}" aria-label="Marquer comme fait" onclick="toggleEv('${e.id}')">${e.done?"✓":""}</button>
+    <div class="main"><div class="t"><span class="tag ${tagClass(e.type)}">${e.type==="DS"?"Contrôle":esc(e.type)}</span>${esc(e.subject)}</div>
+    <div class="muted">${e.type==="Devoir"&&e.note?"<span style='color:var(--text)'>"+esc(e.note)+"</span><br>":""}${e.type==="Devoir"?"Pour le "+fmtDate(e.date,""):fmtDate(e.date,e.time)}${e.type!=="Devoir"&&e.note?" — "+esc(e.note):""}</div></div>
+    ${isPast?"":`<span class="days ${d<=2?"soon":""}">${jLabel(d)}</span>`}
+    <button class="del" aria-label="Supprimer" onclick="delEv('${e.id}')">×</button></div>`;
+}
+function toggleEv(id){const e=data.events.find(x=>x.id===id);e.done=!e.done;save();render()}
+function delEv(id){data.events=data.events.filter(x=>x.id!==id);save();render()}
+
+/* ---------- Chapitres ---------- */
+function renderChapitres(){
+  $("#title").textContent="Chapitres";
+  const all=Object.values(data.chapters).flat(),m=all.filter(c=>c.level===3).length;
+  $("#sub").textContent=all.length?`${m} maîtrisé${m>1?"s":""} sur ${all.length} · touche un statut pour le faire avancer`:"Ajoute les chapitres au fil des cours";
+  $("#view").innerHTML=`<div style="margin-top:20px">`+SUBJECTS.map(s=>{
+    const list=data.chapters[s]||[];
+    const pct=list.length?Math.round(list.reduce((a,c)=>a+c.level,0)/(list.length*3)*100):0;
+    const open=openSubj===s;
+    return `<div class="subj">
+      <button class="subj-head" onclick="toggleSubj('${s}')" aria-expanded="${open}">
+        <span class="n">${s}</span><span class="muted">${list.length?`${list.length} chap. · ${pct} %`:"Vide"}</span><span class="muted">${open?"▴":"▾"}</span></button>
+      ${list.length?`<div class="bar"><i style="width:${pct}%"></i></div>`:""}
+      ${open?`<div class="subj-body">
+        ${list.map(c=>`<div class="chap"><span class="name">${esc(c.name)}</span>
+          <button class="lvl" data-l="${c.level}" onclick="bump('${s}','${c.id}')">${LEVELS[c.level]}</button>
+          <button class="del" aria-label="Supprimer" onclick="delChap('${s}','${c.id}')">×</button></div>`).join("")}
+        <div class="add-row"><input id="newChap" placeholder="Nouveau chapitre" onkeydown="if(event.key==='Enter')addChap('${s}')">
+        <button class="btn" onclick="addChap('${s}')">Ajouter</button></div></div>`:""}
+    </div>`}).join("")+`</div>`;
+}
+function toggleSubj(s){openSubj=openSubj===s?null:s;render()}
+function addChap(s){const v=$("#newChap").value.trim();if(!v)return;data.chapters[s].push({id:uid(),name:v,level:0});save();render();$("#newChap").focus()}
+function bump(s,id){const c=data.chapters[s].find(x=>x.id===id);c.level=(c.level+1)%4;save();render()}
+function delChap(s,id){data.chapters[s]=data.chapters[s].filter(x=>x.id!==id);save();render()}
+
+/* ---------- Tâches ---------- */
+function taskRow(t){
+  return `<div class="item ${t.done?"done":""}">
+    <button class="check ${t.done?"on":""}" aria-label="Cocher" onclick="toggleTask('${t.id}')">${t.done?"✓":""}</button>
+    <div class="main"><div class="t">${esc(t.text)}</div>${t.subject?`<div class="muted">${esc(t.subject)}</div>`:""}</div>
+    <button class="del" aria-label="Supprimer" onclick="delTask('${t.id}')">×</button></div>`;
+}
+function renderTaches(){
+  $("#title").textContent="Tâches";
+  const left=data.tasks.filter(t=>!t.done).length;
+  $("#sub").textContent=data.tasks.length?(left?`${left} à faire`:"Tout est fait"):"Exos à refaire, fiches, DM";
+  const list=data.tasks.filter(t=>taskFilter==="Toutes"||t.subject===taskFilter).sort((a,b)=>a.done-b.done);
+  $("#view").innerHTML=`<div class="filters">${["Toutes",...SUBJECTS].map(s=>`<button class="chip ${taskFilter===s?"on":""}" onclick="setFilter('${s}')">${s}</button>`).join("")}</div>
+    <div style="margin-top:14px">${list.length?`<div class="card">${list.map(taskRow).join("")}</div>`:`<p class="empty">Aucune tâche. Ajoute un exo à refaire ou un chapitre à relire avec le bouton +.</p>`}</div>
+    ${data.tasks.some(t=>t.done)?`<p style="margin-top:18px"><button class="btn ghost" onclick="clearDone()">Retirer les tâches faites</button></p>`:""}`;
+}
+function setFilter(s){taskFilter=s;render()}
+function toggleTask(id){const t=data.tasks.find(x=>x.id===id);t.done=!t.done;save();render()}
+function delTask(id){data.tasks=data.tasks.filter(x=>x.id!==id);save();render()}
+function clearDone(){data.tasks=data.tasks.filter(t=>!t.done);save();render()}
+
+/* ---------- Ajout ---------- */
+function openSheet(kind){
+  const opts=a=>a.map(x=>`<option>${x}</option>`).join("");
+  let h;
+  if(kind==="task"){
+    h=`<h3>Nouvelle tâche</h3>
+      <label for="tTxt">Quoi</label><input id="tTxt" placeholder="Refaire l'exo 12 du TD">
+      <label for="tSub">Matière</label><select id="tSub"><option value="">Aucune</option>${opts(SUBJECTS)}</select>
+      <div class="grid2" style="margin-top:22px"><button class="btn ghost" onclick="closeSheet()">Annuler</button><button class="btn" onclick="addTask()">Ajouter</button></div>`;
+  }else{
+    const d=new Date(),t=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    h=`<h3>Nouvelle échéance</h3>
+      <div class="grid2"><div><label for="eType">Type</label><select id="eType">${opts(TYPES)}</select></div>
+      <div><label for="eSub">Matière</label><select id="eSub">${opts(SUBJECTS)}</select></div></div>
+      <div class="grid2"><div><label for="eDate">Date</label><input type="date" id="eDate" value="${t}"></div>
+      <div><label for="eTime">Heure</label><input type="time" id="eTime"></div></div>
+      <label for="eNote">Note (facultatif)</label><input id="eNote" placeholder="Chapitre, salle, colleur…">
+      <div class="grid2" style="margin-top:22px"><button class="btn ghost" onclick="closeSheet()">Annuler</button><button class="btn" onclick="addEv()">Ajouter</button></div>`;
+  }
+  $("#sheet").innerHTML=h;$("#sheetBg").classList.add("open");
+}
+function chooseAdd(){
+  $("#sheet").innerHTML=`<h3>Ajouter</h3>
+    <div style="display:grid;gap:10px;margin-top:16px">
+      <button class="btn" onclick="openSheet('event')">Une colle, un DS, un DM…</button>
+      <button class="btn ghost" onclick="openSheet('task')">Une tâche</button>
+      <button class="btn ghost" onclick="closeSheet();tab='chapitres';openSubj=openSubj||'Maths';render()">Un chapitre</button>
+    </div>`;
+  $("#sheetBg").classList.add("open");
+}
+function closeSheet(){$("#sheetBg").classList.remove("open")}
+function addEv(){
+  const date=$("#eDate").value;if(!date)return;
+  data.events.push({id:uid(),type:$("#eType").value,subject:$("#eSub").value,date,time:$("#eTime").value,note:$("#eNote").value.trim(),done:false});
+  save();closeSheet();render();
+}
+function addTask(){
+  const v=$("#tTxt").value.trim();if(!v)return;
+  data.tasks.push({id:uid(),text:v,subject:$("#tSub").value,done:false});
+  save();closeSheet();render();
+}
+async function resetAll(){
+  if(!confirm("Effacer toutes les échéances, chapitres et tâches ?"))return;
+  data={events:[],tasks:[],chapters:Object.fromEntries(SUBJECTS.map(s=>[s,[]])),settings:data.settings};
+  try{await window.storage.delete(KEY,false)}catch(e){}
+  try{localStorage.removeItem(KEY)}catch(e){}
+  render();
+}
+
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;window.scrollTo(0,0);render()});
+$("#fab").onclick=()=>{
+  if(tab==="agenda")openSheet("event");
+  else if(tab==="taches")openSheet("task");
+  else if(tab==="cours")openSettings();
+  else if(tab==="chapitres"){openSubj=openSubj||SUBJECTS[0];render();setTimeout(()=>$("#newChap")?.focus(),0)}
+  else chooseAdd();
+};
+$("#sheetBg").onclick=e=>{if(e.target.id==="sheetBg")closeSheet()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
+load();
+</script>
