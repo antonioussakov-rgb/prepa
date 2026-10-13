@@ -142,7 +142,7 @@ const TYPES=["Devoir","Colle","DS","DM","Interro","Autre"];
 const LEVELS=["À voir","Vu en cours","Revu","Maîtrisé"];
 const KEY="prepa-organiseur-v1";
 let tab="jour", taskFilter="Toutes", openSubj=null;
-let data={events:[],tasks:[],chapters:Object.fromEntries(SUBJECTS.map(s=>[s,[]])),settings:{group:null,lv2:null,ref:null,refLetter:null}};
+let data={events:[],tasks:[],chapters:Object.fromEntries(SUBJECTS.map(s=>[s,[]])),settings:{group:1,lv2:null,ref:null,refLetter:null}};
 let coursWeek=null;
 /* Colloscope PCSI 1 — S1 2026/27 — groupe de colle 1 */
 const COLLE_CODES={A1:["Anglais",1,18,"Mme Copson"],A2:["Anglais",2,16,"Mme Gaillard"],A3:["Anglais",2,17,"Mme Gateault"],A4:["Anglais",4,17,"M. Fouilleux"],
@@ -163,22 +163,21 @@ function importColloscope(){
   data.colloImported=true;save();
 }
 const DAYS=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
-const COMMON_TUE=[[2,8,10,"Physique","Bât M"],[2,10,12,"Anglais","I32"],[2,13,14,"LV2",""],[2,14,16,"Maths","I32"]];
 const EDT={
- A:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"SI","I32"],[1,16,18,"Maths","I32"],...COMMON_TUE,
-    [3,9,11,"TP Chimie","Bât M",1],[3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],[3,16,17,"EPS",""],
-    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],[4,12,13,"LV2",""],
-    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,12,13,"EPS",""],
-    [5,14,16,"TP SI","Bât M",1],[5,14,16,"TP Physique","Bât M",2],[5,16,18,"TP Physique","Bât M",1],[5,16,18,"TP SI","Bât M",2]],
- B:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"Maths","I32"],[1,16,17,"TD Chimie","I32"],...COMMON_TUE,
-    [3,9,11,"TP Chimie","Bât M",2],[3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],[3,16,17,"EPS",""],
-    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],[4,12,13,"LV2",""],[4,14,16,"Info","G11"],
-    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,12,13,"EPS",""],
-    [5,14,16,"TP Physique","Bât M",1],[5,14,16,"TP SI","Bât M",2],[5,16,18,"TP SI","Bât M",1],[5,16,18,"TP Physique","Bât M",2]]
+ A:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"Maths","I32"],[1,16,18,"Maths","I32"],
+    [2,8,10,"Physique","Bât M"],[2,10,12,"Anglais","I32"],[2,14,16,"Maths","I32"],
+    [3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],
+    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],
+    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,14,16,"TP Physique","Bât M"],[5,16,18,"TP SI","Bât M"]],
+ B:[[1,8,10,"Lettres","I32"],[1,10,12,"Maths","I32"],[1,14,16,"Maths","I32"],[1,16,17,"TD Chimie","I32"],
+    [2,8,10,"Physique","Bât M"],[2,10,12,"Anglais","I32"],[2,14,16,"Maths","I32"],
+    [3,9,12,"TP Chimie","Bât M"],[3,13,14,"TD SI","M02"],[3,14,16,"Chimie","Bât M"],
+    [4,8,10,"Physique","Bât M"],[4,10,12,"Maths","I32"],
+    [5,8,10,"Physique","Bât M"],[5,10,12,"Maths","I32"],[5,14,16,"TP SI","Bât M"],[5,16,18,"TP Physique","Bât M"]]
 };
 const isoLocal=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 function mondayOf(d){const x=new Date(d);x.setHours(0,0,0,0);x.setDate(x.getDate()-((x.getDay()+6)%7));return x}
-function configured(){const st=data.settings;return st.group&&st.lv2&&st.ref}
+function configured(){return !!data.settings.ref}
 function weekLetter(date){
   const st=data.settings;if(!st.ref)return null;
   const w=Math.round((mondayOf(date)-new Date(st.ref+"T00:00:00"))/(7*86400000));
@@ -252,9 +251,9 @@ function renderJour(){
   const up=upcoming();
   let out="";
   if(!configured()){
-    out+=`<div class="hero"><div class="what" style="margin-top:0">Configure ton emploi du temps</div>
-      <p class="muted" style="margin:6px 0 14px">Ton groupe de TP, ta LV2 et la semaine en cours (A ou B). Ça prend 10 secondes.</p>
-      <button class="btn" onclick="openSettings()">Configurer</button></div>`;
+    out+=`<div class="hero"><div class="what" style="margin-top:0">Cette semaine, c'est la semaine…</div>
+      <p class="muted" style="margin:6px 0 14px">Un seul tap : ensuite l'alternance A/B se fait toute seule.</p>
+      <div class="grid2"><button class="btn" onclick="setWeek('A')">Semaine A</button><button class="btn" onclick="setWeek('B')">Semaine B</button></div></div>`;
   }else{
     const isWE=now.getDay()===0||now.getDay()===6;
     const today=isWE?[]:coursesFor(now);
@@ -310,13 +309,13 @@ function renderCours(){
   $("#title").textContent="Emploi du temps";
   if(!configured()){
     $("#sub").textContent="";
-    $("#view").innerHTML=`<div class="hero"><div class="what" style="margin-top:0">Configure ton emploi du temps</div>
-      <p class="muted" style="margin:6px 0 14px">Choisis ton groupe de TP, ta LV2 et la semaine en cours.</p>
-      <button class="btn" onclick="openSettings()">Configurer</button></div>`;return;
+    $("#view").innerHTML=`<div class="hero"><div class="what" style="margin-top:0">Cette semaine, c'est la semaine…</div>
+      <p class="muted" style="margin:6px 0 14px">Un seul tap : ensuite l'alternance A/B se fait toute seule.</p>
+      <div class="grid2"><button class="btn" onclick="setWeek('A')">Semaine A</button><button class="btn" onclick="setWeek('B')">Semaine B</button></div></div>`;return;
   }
   const now=new Date(),cur=weekLetter(now);
   if(!coursWeek)coursWeek=cur;
-  $("#sub").textContent=`Cette semaine : semaine ${cur} · groupe ${data.settings.group} · ${data.settings.lv2}`;
+  $("#sub").textContent=`Cette semaine : semaine ${cur}`;
   let h=`<div class="toprow"><div class="seg" style="flex:1">${["A","B"].map(l=>`<button class="${coursWeek===l?"on":""}" onclick="coursWeek='${l}';render()">Semaine ${l}</button>`).join("")}</div>
     <button class="btn ghost" onclick="openSettings()" aria-label="Réglages">⚙️</button></div>`;
   for(let d=1;d<=5;d++){
@@ -329,8 +328,6 @@ function openSettings(){
   const st=data.settings,cur=weekLetter(new Date())||"A";
   const seg=(name,vals,sel)=>`<div class="seg">${vals.map(v=>`<button data-k="${name}" data-v="${v}" class="${String(sel)===String(v)?"on":""}" onclick="pickSeg(this)">${name==="group"?"Groupe "+v:name==="week"?"Semaine "+v:v}</button>`).join("")}</div>`;
   $("#sheet").innerHTML=`<h3>Réglages</h3>
-    <label>Ton groupe de TP</label>${seg("group",[1,2],st.group)}
-    <label>Ta LV2</label>${seg("lv2",["Allemand","Espagnol"],st.lv2)}
     <label>Cette semaine, c'est</label>${seg("week",["A","B"],st.ref?cur:"")}
     <p class="muted" style="margin-top:8px">L'alternance A/B se fait ensuite toute seule. Si elle se décale après des vacances, reviens ici pour corriger.</p>
     <div class="grid2" style="margin-top:20px"><button class="btn ghost" onclick="closeSheet()">Annuler</button><button class="btn" onclick="saveSettings()">Enregistrer</button></div>
@@ -351,12 +348,13 @@ function importData(){
     save();closeSheet();render();alert("Données restaurées.")}
   catch(e){alert("Ce texte n'est pas une sauvegarde valide. Recopie-la en entier.")}
 }
+function setWeek(l){data.settings={...data.settings,ref:isoLocal(mondayOf(new Date())),refLetter:l};coursWeek=null;save();render()}
 function pickSeg(b){b.parentNode.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b))}
 function saveSettings(){
   const get=k=>document.querySelector(`#sheet button.on[data-k="${k}"]`)?.dataset.v;
   const g=get("group"),l=get("lv2"),w=get("week");
-  if(!g||!l||!w){alert("Choisis ton groupe, ta LV2 et la semaine.");return}
-  data.settings={group:+g,lv2:l,ref:isoLocal(mondayOf(new Date())),refLetter:w};
+  if(!w){alert("Choisis la semaine.");return}
+  data.settings={group:1,lv2:null,ref:isoLocal(mondayOf(new Date())),refLetter:w};
   coursWeek=null;save();closeSheet();render();
 }
 
